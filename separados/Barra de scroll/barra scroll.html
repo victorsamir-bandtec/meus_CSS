@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>scrool colorido</title>
+</head>
+
+<body>
+
+    <div id="bar"></div>
+    <div id="scroll"></div>
+
+
+
+    <section>
+        <h2> rolamento colorido </h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis odio fermentum, aliquam risus eget,
+            imperdiet nunc. Fusce felis ligula, consequat vel sem sit amet, porttitor cursus quam. Donec risus magna,
+            condimentum in est quis, vulputate placerat urna. Mauris tincidunt nibh sapien, et ullamcorper tortor
+            ullamcorper sit amet. Suspendisse ultricies a nibh in lobortis. Morbi laoreet, diam vel laoreet ornare,
+            sapien urna fringilla nulla, ut fermentum est nisi a augue. Proin facilisis velit ac facilisis mattis.
+            Quisque commodo iaculis dolor sit amet posuere. Curabitur a tortor et quam viverra hendrerit.
+
+            Fusce blandit aliquet orci ac congue. Curabitur nec aliquet velit. Quisque hendrerit sollicitudin quam vel
+            venenatis. Pellentesque pulvinar elementum libero, eget ultricies sem posuere a. Maecenas a maximus dolor.
+            Ut eget lacus odio. Suspendisse ut dui sed lacus egestas lacinia eu quis nisi. Sed quis blandit turpis. Nunc
+            ligula lacus, egestas vel felis eu, gravida vestibulum metus. Pellentesque sed felis tristique, cursus eros
+            scelerisque, hendrerit nisi.
+
+            Etiam mollis rutrum ante, non aliquet nibh tempor et. Nam venenatis aliquet leo, non feugiat purus mattis
+            ac. Integer nulla erat, facilisis vel feugiat nec, vulputate vel ex. Aenean at euismod arcu, at lobortis
+            justo. Aenean in libero bibendum, ultricies enim sit amet, eleifend massa. Donec congue eros eget est
+            aliquet volutpat. Nam euismod rutrum pharetra. Vivamus sollicitudin quam in arcu mollis iaculis. Curabitur
+            lobortis nibh ullamcorper volutpat pulvinar. Morbi mollis lacus at ex dapibus rhoncus. Morbi laoreet ac arcu
+            id consectetur. Sed placerat varius fermentum. Integer at venenatis tellus, id ornare nisl. Nunc pharetra
+            fermentum nisl ac pharetrem.
+        </p>
+
+    </section>
+
+    <img src="/1.jpg" alt="">
+
+
+
+    <script type="text/javascript">
+        let progress = document.getElementById('bar');
+        let totalHight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+            let progressHeight = (window.pageYOffset / totalHight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+
+</body>
+
+
+
+</html>

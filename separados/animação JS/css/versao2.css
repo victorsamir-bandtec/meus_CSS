@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* geral */
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+
+/* NAV */
+nav {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  
+  min-height: 10vh;
+
+  align-items: center;
+  
+  color: white;
+}
+
+#logo {
+  grid-column: 2/3;
+
+  color: black;
+  font-size: 3em;
+}
+nav .menu {
+  width: 30px;
+
+  justify-self: end;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #9e9e9e, #e7e7e7 ) ;
+  z-index: -1;
+}
+
+section{
+  display: flex;
+  height: 85vh;
+
+  justify-content: center;
+  align-items: center;
+
+}
+section .fundo {
+  position: relative;
+  width: 100;
+  height: 85%;
+}
+
+section .fundo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+section h1 {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+
+  font-size: 5.3em;
+
+  transform: translate(-20%, -70%);
+  z-index: 1;
+  color: white;
+}
+
+section .fundo::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.205);
+}
