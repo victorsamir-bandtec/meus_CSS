@@ -1,4 +1,4 @@
-
+// Funcional, pra qualquer coisa
 function mostrar_modal(abrir, onde, fechar) {
 
   const mostrar = document.querySelector(abrir);
@@ -18,5 +18,7 @@ function mostrar_modal(abrir, onde, fechar) {
 }
 
 mostrar_modal('.foto-5', '.modal-container', '.fechar');
+
+
 
 

@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin    : 0;
+  padding   : 0;
   box-sizing: border-box;
 }
 
@@ -19,100 +19,106 @@ body {
 
 
 .container {
-  display: flex;
+  display        : flex;
   justify-content: center;
-  align-items: center;
+  align-items    : center;
 
   height: 100vh;
 
   background: linear-gradient(145deg, rgba(145, 0, 158, 0.100), rgba(89, 0, 255, 0.100)),
-  url(https://cdna.artstation.com/p/assets/images/images/010/171/528/large/gerardo-ramirez-tatoomachine-export.jpg?1522948531);
+    url(https://cdna.artstation.com/p/assets/images/images/010/171/528/large/gerardo-ramirez-tatoomachine-export.jpg?1522948531);
 
-  filter:saturate(1.5);
-  background-size: cover;
+  filter           : saturate(1.5);
+  background-size  : cover;
   background-repeat: no-repeat;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr );
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
 
   grid-gap: 20px;
 }
 
-img {
-  width: 250px;
-  margin: 0;
+.grid img {
+  width  : 250px;
+  margin : 0;
   padding: 0;
 
-  cursor: pointer;
+  cursor    : pointer;
+  transition: 0.5s linear;
+
 
   border-radius: 4px;
 }
 
+@keyframes img {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.grid img:hover {
+  filter   : saturate(0);
+  animation: img 2s linear;
+}
+
 .modal-container {
   position: fixed;
-  display: none;
+  display : flex;
 
-  width: 100vw;
+  width : 100vw;
   height: 100vh;
 
-  top: 0;
+  top : 0;
   left: 0;
 
   justify-content: center;
-  align-items: center;
+  align-items    : center;
 
+  visibility: hidden;
+  opacity   : 0;
+
+  transition: 0.3s linear;
 
   background: rgba(0, 0, 0, 0.37);
 }
 
+.modal-container.mostrar {
+  visibility: visible;
+  opacity   : 1;
+}
+
 .modal img {
   position: relative;
-  width: 520px;
+  width   : 520px;
 
   border: 10px solid white;
 }
 
 .modal button {
   position: absolute;
-  top: 5%;
-  left: 66%;
+  top     : 5%;
+  left    : 66%;
 
-  width: 50px;
+  width : 50px;
   height: 50px;
 
   font-size: 70px;
-  padding: 5px;
+  padding  : 5px;
 
-  border: none;
+  border : none;
   outline: none;
-  cursor: pointer;
+  cursor : pointer;
 
   text-shadow: 0 0 5px black;
-  z-index: 4;
+  z-index    : 1;
 
-  color: white;
+  color     : white;
   background: none;
 
-}
-
-.modal-container.mostrar {
-  display: flex;
-}
-
-.mostrar  img {
-  animation: modal .6s ease-in-out;
-}
-
-@keyframes modal {
-  from {
-    opacity: 0;
-    transform: translateY(-90px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-
-  }
 }
