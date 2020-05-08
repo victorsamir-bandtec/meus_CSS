@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+body {
+  background: #eee;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background: linear-gradient(145deg, rgba(145, 0, 158, 0.100), rgba(89, 0, 255, 0.100)),
+  url(https://cdna.artstation.com/p/assets/images/images/010/171/528/large/gerardo-ramirez-tatoomachine-export.jpg?1522948531);
+
+  filter:saturate(1.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr );
+
+  grid-gap: 20px;
+}
+
+img {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  border-radius: 4px;
+}
+
+.modal-container {
+  position: fixed;
+  display: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  top: 0;
+  left: 0;
+
+  justify-content: center;
+  align-items: center;
+
+
+  background: rgba(0, 0, 0, 0.37);
+}
+
+.modal img {
+  position: relative;
+  width: 520px;
+
+  border: 10px solid white;
+}
+
+.modal button {
+  position: absolute;
+  top: 5%;
+  left: 66%;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 70px;
+  padding: 5px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  text-shadow: 0 0 5px black;
+  z-index: 4;
+
+  color: white;
+  background: none;
+
+}
+
+.modal-container.mostrar {
+  display: flex;
+}
+
+.mostrar  img {
+  animation: modal .6s ease-in-out;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+
+  }
+}
